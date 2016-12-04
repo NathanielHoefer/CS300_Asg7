@@ -1,0 +1,15 @@
+Creating Hashing Table...
+
+Values Not Stored: 
+
+25
+
+Searching Hashing Table...
+
+Found:        34       Probes: 1
+Not Found:    18
+Not Found:    22
+Found:        18867    Probes: 3
+Not Found:    36
+Found:        25       Probes: 2
+Found:        25       Probes: 2

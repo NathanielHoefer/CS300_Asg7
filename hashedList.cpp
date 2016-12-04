@@ -35,7 +35,7 @@ HashedList::HashedList(int size)
 	// Creates vector 125% larger than specificed
 	vector<int> temp((int)(size * 1.25), -1);
 	mList = temp;
-	mPrime = 11;
+	mPrime = 100003;
 	mCurrSize = 0;
 	mListSize = size;
 }
@@ -105,6 +105,8 @@ int HashedList::quadProbe(int value, bool insert)
 	int probeCnt = 1;
 	bool found = false;
 
+	// Continues while probe count doesn't exceed 10, the address is within the
+	// vector size, and the hasn't been found.
 	while ( ( probeCnt <= 10 && address <= (mListSize*1.25) ) && !found )
 	{
 		if ( insert )
@@ -139,8 +141,6 @@ int HashedList::quadProbe(int value, bool insert)
 		}
 	}
 
-	cout << "Value: " << value << " Address: " << address << " Probes: " << probeCnt << " ";
-
 	// Returns the probe count or -1 if not found or placed
 	if ( ( probeCnt == 10 && !found ) || address > (mListSize*1.25) )
 	{
@@ -159,7 +159,7 @@ int HashedList::quadProbe(int value, bool insert)
 //	Calculates the nearest prime to the entered value
 //			Preconditions: None
 //			Postconditions: None
-//			Returns: THe nearest prime to entered value
+//			Returns: The nearest prime to entered value
 int HashedList::nearPrime(int value)
 {
 	int primeNum = value;
