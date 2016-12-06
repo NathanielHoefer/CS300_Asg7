@@ -35,6 +35,7 @@ HashedList::HashedList(int size)
 	// Creates vector 125% larger than specificed
 	vector<int> temp((int)(size * 1.25), -1);
 	mList = temp;
+//	mPrime = 10;
 	mPrime = 100003;
 	mCurrSize = 0;
 	mListSize = size;

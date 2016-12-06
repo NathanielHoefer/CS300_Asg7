@@ -36,6 +36,7 @@ using namespace std;
 int main()
 {
 
+//	int listSize = 10;
 	int listSize = 100000;
 	int inVal;
 	int result;
@@ -45,7 +46,7 @@ int main()
 	ifstream input("file.dat");
 	ofstream output("results.dat");
 
-	output << "Creating Hashing Table...\n\n";
+	output << "Creating Hash Table...\n\n";
 	output << "Values Not Stored: \n\n";
 
 	// Input the first 100,000 values
@@ -56,7 +57,7 @@ int main()
 			output << inVal << "\n";
 	}
 
-	output << "\nSearching Hashing Table...\n\n";
+	output << "\nSearching Hash Table...\n\n";
 
 	// Search for the remaining values
 	while ( !input.eof() )
